@@ -1,10 +1,9 @@
 
-import {  faBars, faSortDown, faTableCells } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DetailedHTMLProps, HTMLAttributes, LegacyRef, MouseEventHandler, MutableRefObject, useRef, useState } from 'react'
+
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import './assets/scss/styles.scss'
-import { MenuItem } from './modules/layout/navbar-sidebar/MenuItem';
+
 import { Navbar } from './modules/layout/navbar-sidebar/Navbar';
 import { Sidebar } from './modules/layout/navbar-sidebar/Sidebar';
 

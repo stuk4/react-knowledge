@@ -18,7 +18,7 @@ export const Sidebar = ({refSidebar,refWrapper}:Props) => {
     // in this way i can stay mediaquery and button functionality
     if(refSidebar.current.clientWidth ===0){
 
-      // I Remove default classes to  ignore mediaquery and add new
+      // I Remove default classes to  ignore mediaquery to add new
       refSidebar.current.classList.remove('w-[0]','sm:w-[260px]]')
       refSidebar.current.classList.add('w-[260px]')
       refIconMenu.current.classList.remove('rounded-md','left-[20px]','sm:rounded-full','sm:left-[235px]')
@@ -30,7 +30,7 @@ export const Sidebar = ({refSidebar,refWrapper}:Props) => {
 
 
     }else{
-      // I Remove default classes to ignore mediaquery and add new
+      // I Remove default classes to ignore mediaquery to add new
       refSidebar.current.classList.remove('w-[0]','sm:w-[260px]','w-[260px]')
       refSidebar.current.classList.add('w-[0]')
       refIconMenu.current.classList.remove('rounded-md','left-[20px]','sm:rounded-full','sm:left-[235px]','rounded-full','left-[235px]')

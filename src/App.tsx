@@ -1,48 +1,32 @@
 
 import {  faBars, faSortDown, faTableCells } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react'
+import { DetailedHTMLProps, HTMLAttributes, LegacyRef, MouseEventHandler, MutableRefObject, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import './assets/scss/styles.scss'
-import { MenuItem } from './modules/components/navbar/MenuItem';
+import { MenuItem } from './modules/layout/navbar-sidebar/MenuItem';
+import { Navbar } from './modules/layout/navbar-sidebar/Navbar';
+import { Sidebar } from './modules/layout/navbar-sidebar/Sidebar';
 
 function App() {
   const [count, setCount] = useState(0)
- const { t,i18n } = useTranslation();
+  const { t,i18n } = useTranslation();
 //  https://coderthemes.com/hyper/saas/index.html
-  return (
-
-    <div className='w-[260px] bg-slate-custom h-screen'>
-        {/* brand and comapny name */}
-        <div className='w-full h-14  flex items-center  justify-center mb-2 relative'>
-       
-          <div className='text-center mx-auto my-auto uppercase '>
-            <img  className='w-28' src="https://naturaldemontana.com/wp-content/uploads/2020/06/simple-home-logo.png" alt="" />
-          </div>
-          <div className='absolute -right-6 bg-slate-200 rounded-full h-12 w-12 grid place-content-center cursor-pointer ' >
-            <FontAwesomeIcon size='2x' icon={faBars} />
-          </div>
-        </div>
-        {/* Menu section */}
-    
-          <ul className='w-full  grid grid-cols-1  '>
-            <li className='nav-item__title'>Navigation</li>
-            <MenuItem icon={faTableCells} navigationName="Dashboard" haveChildren />
-            <MenuItem icon={faTableCells} navigationName="Tasks" haveChildren />
-            <MenuItem icon={faTableCells} navigationName="Dashboard"  />
-            <li className='nav-item__title'>Navigation</li>
-            <MenuItem icon={faTableCells} navigationName="Dashboard" haveChildren />
+  const refSidebar = useRef<HTMLDivElement>(null)
+  const refWrapper = useRef<HTMLElement>(null)
   
-           
-       
-          
-           
-          
-           
-
-          </ul>
-        
-     </div>
+  return (
+    <div className='bg-gray-200 relative  w-screen h-screen'>
+      <Sidebar  
+        refSidebar={refSidebar}
+        refWrapper={refWrapper}
+        />
+      <Navbar 
+        />
+      <main ref={refWrapper} className="w-full h-full pt-16  pl-2 pr-2 sm:pl-[270px] transition-all duration-500" >
+        testing
+      </main>
+    </div>
  
 
   

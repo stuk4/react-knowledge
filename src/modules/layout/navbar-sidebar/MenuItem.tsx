@@ -11,12 +11,12 @@ interface Props{
 }
 export const MenuItem = (props:Props) => {
     const {haveChildren,navigationName} = props;
-    const [dropDown,setDropwDown] = useState<Boolean>(false)
+    const [dropDown,setDropDown] = useState<Boolean>(false)
     const refContainerDropDown = useRef<HTMLDivElement>(null)
     const refDropDown = useRef<HTMLUListElement>(null)
     const handleDropDown = () => {
         if(refDropDown.current &&refContainerDropDown.current){
-            setDropwDown(!dropDown)
+            setDropDown(!dropDown)
             if (refContainerDropDown.current.clientHeight) {
                 refContainerDropDown.current.style.height = '0px';
               } else {

@@ -46,7 +46,7 @@ To run this project locally, clone the repository and install the dependencies:
 
 ```bash
 git clone https://github.com/stuk4/react-knowledge-tailwind.git
-cd react-dashboard
+cd react-knowledge-tailwind
 yarn install
 ```
 Then, start the development server:

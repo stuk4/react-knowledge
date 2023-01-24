@@ -45,7 +45,7 @@ npm 8.15.0
 To run this project locally, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/[your_username]/react-dashboard.git
+git clone https://github.com/stuk4/react-knowledge-tailwind.git
 cd react-dashboard
 yarn install
 ```
